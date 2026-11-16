@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+</head>
+<body>
+
+    <!-- TELA DE PERFIL -->
+    <section class="tela_perfil">
+
+        <div class="perfil_texto">
+            Perfil 👤
+
+            <div>
+                <img src="" alt="Foto de perfil">
+            </div>
+        </div>
+
+        <button class="alterar_foto_perfil" type="button"
+            onclick="AlterarFoto()">
+            <div class="alterar_foto_perfil_texto">Alterar foto</div>
+        </button>
+
+        <div class="painel_esq_perfil">
+
+            <div class="nome_usuario">👱‍♀️ Nome de usuário</div>
+            <div class="idade_perfil">Idade</div>
+            <div class="altura_perfil">Altura</div>
+            <div class="peso_perfil">Peso</div>
+            <div class="email_perfil">E-mail</div>
+
+        </div>
+
+        <div class="painel_dir_perfil">
+
+            <div class="config_perfil">⚙ Configurações</div>
+
+            <button class="alterar_dados_pessoais" type="button"
+                onclick="AbrirSecao('dados_pessoais')">
+                <div class="alterar_dados_pessoais_texto">
+                    Alterar dados pessoais
+                </div>
+            </button>
+
+            <button class="sair_da_conta" type="button"
+                onclick="AbrirDialogSair()">
+                <div class="sair_da_conta_texto">Sair da conta</div>
+            </button>
+
+            <button class="trocar_de_conta" type="button"
+                onclick="AbrirDialogTrocarConta()">
+                <div class="trocar_de_conta_texto">Trocar de conta</div>
+            </button>
+
+        </div>
+
+        <div class="texto_fofo_tela_perfil">
+            Sua jornada sempre será a mais bela 🌻
+        </div>
+
+    </section>
+
+
+    <!-- TELA DE FOTO DE PERFIL -->
+    <section class="tela_foto_perfil">
+
+        <div class="menu_topo_foto_perfil">
+
+            <button class="retornar_foto_perfil" type="button"
+                onclick="VoltarSecao()">
+                <div class="retorno_icone">⬅</div>
+            </button>
+
+            <span class="titulo_foto_perfil">Foto de perfil</span>
+
+        </div>
+
+        <div class="painel_foto_perfil">
+
+            <div class="imagem_foto_perfil">
+                <img src="" alt="Foto de perfil">
+            </div>
+
+            <button class="alterar_foto_perfil" type="button"
+                onclick="AlterarFoto()">
+                <div class="alterar_foto_perfil_texto">Alterar foto</div>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- DIÁLOGO DE TROCAR DE CONTA -->
+    <dialog class="janela_trocar_conta" id="dialog_trocar_conta">
+
+        <div class="botao_trocar_conta">🔄</div>
+
+        <button class="trocar_conta_fechar" type="button"
+            onclick="FecharDialogTrocarConta()">
+            <div class="trocar_conta_fechar_texto">✖</div>
+        </button>
+
+        <div class="confirmacao_trocar_conta_texto">
+            O que deseja fazer?
+        </div>
+
+        <button class="entrar_outra_conta" type="button"
+            onclick="EntrarOutraConta()">
+            <div class="entrar_outra_conta_texto">
+                Entrar em outra conta
+            </div>
+        </button>
+
+        <button class="criar_nova_conta" type="button"
+            onclick="CriarNovaConta()">
+            <div class="criar_nova_conta_texto">
+                Criar nova conta
+            </div>
+        </button>
+
+        <button class="cancelar_trocar_conta" type="button"
+            onclick="FecharDialogTrocarConta()">
+            <div class="cancelar_trocar_conta_texto">
+                Cancelar
+            </div>
+        </button>
+
+    </dialog>
+
+
+    <!-- DIÁLOGO DE SAIR DA CONTA -->
+    <dialog class="janela_sair_conta" id="dialog_sair_conta">
+
+        <div class="botao_exit">🚪</div>
+
+        <button class="sair_icone" type="button"
+            onclick="FecharDialogSair()">
+            <div class="sair_icone_texto">✖</div>
+        </button>
+
+        <div class="confirmacao_sair_da_conta">
+            Sair da conta?
+        </div>
+
+        <div class="confirmacao_sair">
+            Tem certeza que deseja sair da sua conta?
+        </div>
+
+        <button class="sair_botao" type="button"
+            onclick="SairConta()">
+            <div class="sair_texto">Sair</div>
+        </button>
+
+        <button class="cancelar_sair_botao" type="button"
+            onclick="FecharDialogSair()">
+            <div class="cancelar_sair_texto">Cancelar</div>
+        </button>
+
+    </dialog>
+
+    <script>
+
+        // ABRIR DIÁLOGO DE SAIR DA CONTA
+        function AbrirDialogSair() {
+            const dialog = document.getElementById("dialog_sair_conta");
+        
+            if (dialog && !dialog.open) {
+                dialog.showModal();
+            }
+        }
+        
+        // ABRIR DIÁLOGO DE TROCAR DE CONTA
+        function AbrirDialogTrocarConta() {
+            const dialog = document.getElementById("dialog_trocar_conta");
+        
+            if (dialog && !dialog.open) {
+                dialog.showModal();
+            }
+        }
+        
+        // FECHAR DIÁLOGO DE SAIR DA CONTA
+        function FecharDialogSair() {
+            document.getElementById("dialog_sair_conta").close();
+        }
+        
+        // FECHAR DIÁLOGO DE TROCAR DE CONTA
+        function FecharDialogTrocarConta() {
+            document.getElementById("dialog_trocar_conta").close();
+        }
+        
+        </script>
+
+</body>
+</html>

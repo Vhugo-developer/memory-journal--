@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tela login</title>
+</head>
+<body>
+    
+    
+    <section class="tela_login" >
+    
+        <div class="menu_topo_login">
+            <div class="titulo_diario_login">
+                Meu Diário de Memórias ♡
+            </div>
+        </div>
+    
+        <div class="painel_login">
+    
+            <div class="titulo_painel_login">
+                Bem-vinda de volta! 🌸
+            </div>
+    
+            <div class="texto_painel_login">
+                Entre na sua conta para continuar.
+            </div>
+    
+            <div class="opcoes_tipo_login">
+    
+                <label>
+                    <input
+                        type="radio"
+                        name="tipo_login"
+                        value="email"
+                        checked
+                        onchange="AlterarTipoLogin(this.value)"
+                    >
+                    E-mail
+                </label>
+    
+                <label>
+                    <input
+                        type="radio"
+                        name="tipo_login"
+                        value="telefone"
+                        onchange="AlterarTipoLogin(this.value)"
+                    >
+                    Telefone
+                </label>
+    
+            </div>
+    
+            <div class="campo_login">
+                <label for="identificacao_login">
+                    E-mail
+                </label>
+    
+                <input
+                    type="email"
+                    id="identificacao_login"
+                    placeholder="Digite seu e-mail"
+                >
+            </div>
+    
+            <div class="campo_senha_login">
+                <label for="senha_login">
+                    Senha
+                </label>
+    
+                <input
+                    type="password"
+                    id="senha_login"
+                    placeholder="Digite sua senha"
+                >
+            </div>
+    
+            <button class="esqueci_senha"
+                onclick="AbrirSecao('recuperacao_senha')">
+                Esqueci minha senha
+            </button>
+    
+            <button class="entrar_conta"
+                onclick="FazerLogin()">
+                Entrar
+            </button>
+    
+            <div class="texto_criar_conta">
+                Ainda não tem uma conta?
+            </div>
+    
+            <button class="botao_criar_conta"
+                onclick="AbrirSecao('cadastro')">
+                Criar conta
+            </button>
+    
+        </div>
+    
+    </section>
+    
+    
+    <div class="painel_recuperacao_senha">
+    
+        <!-- ETAPA 1: IDENTIFICAÇÃO -->
+    
+        <div class="etapa_identificacao_recuperacao">
+    
+            <div class="titulo_recuperacao_senha">
+                Recuperar senha 🔐
+            </div>
+    
+            <div class="texto_recuperacao_senha">
+                Informe seu e-mail ou telefone para receber o código de verificação.
+            </div>
+    
+            <div class="opcoes_tipo_recuperacao">
+    
+                <label>
+                    <input
+                        type="radio"
+                        name="tipo_recuperacao"
+                        value="email"
+                        checked
+                        onchange="AlterarTipoRecuperacao(this.value)"
+                    >
+                    E-mail
+                </label>
+    
+                <label>
+                    <input
+                        type="radio"
+                        name="tipo_recuperacao"
+                        value="telefone"
+                        onchange="AlterarTipoRecuperacao(this.value)"
+                    >
+                    Telefone
+                </label>
+    
+            </div>
+    
+            <div class="campo_identificacao_recuperacao">
+    
+                <label for="identificacao_recuperacao">
+                    E-mail
+                </label>
+    
+                <input
+                    type="email"
+                    id="identificacao_recuperacao"
+                    placeholder="Digite seu e-mail"
+                >
+    
+            </div>
+    
+            <button
+                class="enviar_codigo_recuperacao"
+                onclick="EnviarCodigoRecuperacao()">
+                Enviar código
+            </button>
+    
+            <button
+                class="voltar_login"
+                onclick="VoltarLogin()">
+                ⬅ Voltar para o login
+            </button>
+    
+        </div>
+    
+    
+        <!-- ETAPA 2: VERIFICAÇÃO DO CÓDIGO -->
+    
+        <div class="etapa_codigo_recuperacao" hidden>
+    
+            <div class="titulo_codigo_recuperacao">
+                Verificação ✉️
+            </div>
+    
+            <div class="texto_codigo_recuperacao">
+                Enviamos um código de verificação para seu contato.
+                Digite-o abaixo para continuar.
+            </div>
+    
+            <div class="campo_codigo_recuperacao">
+    
+                <label for="codigo_recuperacao">
+                    Código de verificação
+                </label>
+    
+                <input
+                    type="text"
+                    id="codigo_recuperacao"
+                    placeholder="Digite o código"
+                    inputmode="numeric"
+                    maxlength="6"
+                >
+    
+            </div>
+    
+            <button
+                class="validar_codigo_recuperacao"
+                onclick="ValidarCodigoRecuperacao()">
+                Validar código
+            </button>
+    
+            <button
+                class="voltar_identificacao"
+                onclick="VoltarIdentificacaoRecuperacao()">
+                Voltar
+            </button>
+    
+        </div>
+    
+    
+        <!-- ETAPA 3: NOVA SENHA -->
+    
+        <div class="etapa_nova_senha" hidden>
+    
+            <div class="titulo_nova_senha">
+                Criar nova senha 🔑
+            </div>
+    
+            <div class="texto_nova_senha">
+                Escolha uma nova senha para proteger sua conta.
+            </div>
+    
+            <div class="campo_nova_senha">
+    
+                <label for="nova_senha">
+                    Nova senha
+                </label>
+    
+                <input
+                    type="password"
+                    id="nova_senha"
+                    placeholder="Digite sua nova senha"
+                    minlength="8"
+                    maxlength="8"
+                    required
+                >
+    
+            </div>
+    
+            <div class="campo_confirmar_senha">
+    
+                <label for="confirmar_nova_senha">
+                    Confirmar nova senha
+                </label>
+    
+                <input
+                    type="password"
+                    id="confirmar_nova_senha"
+                    placeholder="Confirme sua nova senha"
+                    minlength="8"
+                    maxlength="8"
+                    required
+                >
+    
+            </div>
+    
+            <div class="requisito_senha">
+                Sua senha deve possuir exatamente 8 caracteres.
+            </div>
+    
+            <button
+                class="salvar_nova_senha"
+                onclick="SalvarNovaSenha()">
+                Confirmar nova senha
+            </button>
+    
+        </div>
+    
+    
+        <!-- ETAPA 4: SENHA ALTERADA -->
+    
+        <div class="etapa_senha_validada" hidden>
+    
+            <div class="icone_senha_validada">
+                <span>✓</span>
+            </div>
+    
+            <div class="titulo_senha_validada">
+                Senha alterada! 💜
+            </div>
+    
+            <div class="texto_senha_validada">
+                Sua senha foi atualizada com sucesso.
+                Agora você já pode acessar sua conta novamente.
+            </div>
+    
+            <button
+                class="ir_para_login"
+                onclick="VoltarLogin()">
+                Fazer login
+            </button>
+    
+        </div>
+    
+    </div>
+    
+
+</body>
+</html>

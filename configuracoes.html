@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>personalização</title>
+</head>
+<body>
+    <section class="tela_configuracoes">
+
+        <div class="menu_topo_configuracoes">
+    
+            <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                <div class="retorno_icone">⬅</div>
+            </button>
+    
+            <span class="titulo_configuracoes">Configurações ⚙</span>
+    
+            <div class="frase_config">
+                Personalize seu app do seu jeito!
+            </div>
+    
+        </div>
+    
+    
+        <nav class="menu_personalizacao">
+    
+            <!-- PERSONALIZAÇÃO GLOBAL -->
+            <div class="item_personalizacao">
+    
+                <span class="texto_personalizar_tema_global">
+                    Cor global do aplicativo
+                </span>
+    
+                <button class="botao_personalizar_tema_global"
+                    onclick="MudarCor('tema_global')">
+                    Personalizar
+                </button>
+    
+            </div>
+    
+    
+            <!-- MODO NOTURNO -->
+            <div class="item_personalizacao">
+    
+                <span class="texto_modo_noturno">
+                    Modo noturno
+                </span>
+    
+                <button class="botao_modo_noturno"
+                    onclick="AlternarModoNoturno()">
+                    Ativar / Desativar
+                </button>
+    
+            </div>
+    
+    
+            <!-- FUNDO DOS ÍCONES -->
+            <div class="item_personalizacao">
+    
+                <span class="texto_fundo_icones">
+                    Fundo dos ícones da tela inicial
+                </span>
+    
+                <button class="botao_fundo_icones"
+                    onclick="MudarCor('fundo_icones')">
+                    Personalizar
+                </button>
+    
+            </div>
+    
+    
+            <!-- COR DAS PASTAS -->
+            <div class="item_personalizacao">
+    
+                <span class="texto_cor_pastas">
+                    Cor das pastas
+                </span>
+    
+                <button class="botao_cor_pastas"
+                    onclick="MudarCor('cor_pastas')">
+                    Personalizar
+                </button>
+    
+            </div>
+    
+        </nav>
+    
+    
+        <button class="salvar_personalizacao"
+            onclick="SalvarPersonalizacao()">
+    
+            <div class="salvar_personalizacao_texto">
+                Salvar alterações
+            </div>
+    
+        </button>
+    
+    </section>
+
+</body>
+</html>

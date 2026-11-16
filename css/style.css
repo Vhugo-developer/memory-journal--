@@ -1,0 +1,282 @@
+
+/* ==============================
+   CONFIGURAÇÕES GERAIS
+============================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #D6B8D0;
+    overflow: hidden;
+}
+
+/* ==============================
+   TELA INICIAL
+============================== */
+
+.tela_inicial {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    height: 100dvh;
+    min-height: 0;
+
+    background-image: url("../img/tela_inicial.jpeg");
+    background-size: cover;
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-color: #D6B8D0;
+
+    border: 3px solid #D6B8D0;
+    border-radius: 100px;
+    overflow: hidden;
+
+    padding: 15px;
+}
+
+/* ==============================
+   NOME DO DIÁRIO
+============================== */
+
+.nome_do_site {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    white-space: nowrap;
+    text-align: center;
+
+    color: white;
+    font-size: smaller;
+    font-family: 'Lucida Sans', sans-serif;
+    text-shadow: 2px 2px 4px black;
+
+    z-index: 10;
+}
+
+
+/* ==============================
+   FOTO DE PERFIL
+============================== */
+
+.perfil_foto_menu {
+    position: absolute;
+    top: 55px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    border: 3px solid #D8B8F0;
+    border-radius: 25px;
+    padding: 12px;
+
+    box-shadow: 0 0 15px #D8B8F0;
+    background-color: transparent;
+
+    width: 50px;
+    height: 50px;
+    margin: 0;
+}
+
+.perfil_icone,
+.config_icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-3px);
+}
+
+/* ==============================
+   BOTÃO ABRIR PERFIL
+============================== */
+
+.abrir_perfil {
+    position: absolute;
+    top: 15px;
+    left: 35px;
+    right: auto;
+
+    border: 3px solid #D8B8F0;
+    border-radius: 25px;
+    padding: 12px;
+
+    box-shadow: 0 0 15px #D8B8F0;
+    background-color: #d8b8f052;
+
+    display: flex;
+
+    color: white;
+    font-size: xx-small;
+    font-family: 'Lucida Sans', sans-serif;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* ==============================
+   BOTÃO CONFIGURAÇÕES
+============================== */
+
+.config_botaoo {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    left: auto;
+
+    border: 3px solid #D8B8F0;
+    border-radius: 25px;
+    padding: 12px;
+
+    box-shadow: 0 0 15px #D8B8F0;
+    background-color: #d8b8f052;
+
+    width: 50px;
+    height: 50px;
+
+    color: white;
+    font-size: medium;
+    text-shadow: 2px 2px 4px black;
+}
+
+/* ==============================
+   MOLDURA OVAL DO CONTEÚDO
+============================== */
+
+.painel_tela_principal {
+    background: transparent;
+
+    border: 2px solid #D8B8F0;
+    border-radius: 100px;
+
+    box-shadow: 0 0 12px #D8B8F0;
+
+    margin: 155px 55px 20px;
+
+    padding: 25px 8px;
+
+    /* Ocupa o espaço disponível */
+    height: calc(100% - 175px);
+    min-height: 0;
+
+    /* Organiza frase e botões verticalmente */
+    display: flex;
+    flex-direction: column;
+
+    /* Mantém a moldura parada */
+    overflow: hidden;
+}
+
+/* ==============================
+   FRASE DE APRESENTAÇÃO
+============================== */
+
+.texto_painel_tela_principal {
+    font-size: large;
+    font-family: 'Lucida Sans', sans-serif;
+    color: white;
+    text-shadow: 2px 2px 4px black;
+}
+
+.fundo_texto_painel_tela_principal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-top: 5px;
+    margin-bottom: 25px;
+
+    text-align: center;
+
+    /* Frase não acompanha a rolagem */
+    flex-shrink: 0;
+}
+
+/* ==============================
+   GRADE DOS BOTÕES
+============================== */
+
+.botoes_fundo_pagina_principal {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-auto-rows: 145px;
+    align-content: start;
+    gap: 8px;
+
+    width: 100%;
+    max-width: 525px;
+    margin: 0 auto;
+
+    /* ROLAGEM INDEPENDENTE */
+    flex: 1;
+    min-height: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    padding-bottom: 10px;
+
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior: contain;
+
+    /* Esconde a barra de rolagem */
+    scrollbar-width: none;
+}
+
+.botoes_fundo_pagina_principal::-webkit-scrollbar {
+    display: none;
+}
+
+/* ==============================
+   BOTÕES DAS SEÇÕES
+============================== */
+
+[class$="_botao"] {
+    width: 100%;
+    min-width: 0;
+    height: 145px;
+
+    border: 2px solid #D8B8F0;
+    border-radius: 25px;
+    padding: 8px;
+
+    box-shadow: 0 0 12px #D8B8F0;
+    background-color: #d8b8f0b9;
+
+    font-size: small;
+    color: white;
+
+    font-family: 'Lucida Sans', sans-serif;
+    text-shadow: 2px 2px 10px black;
+}
+
+/* ==============================
+   CELULARES MENORES
+============================== */
+
+@media (max-width: 360px) {
+
+    .painel_tela_principal {
+        margin-left: 45px;
+        margin-right: 45px;
+        padding-left: 6px;
+        padding-right: 6px;
+    }
+
+    .botoes_fundo_pagina_principal {
+        gap: 6px;
+        grid-auto-rows: 130px;
+    }
+
+    [class$="_botao"] {
+        height: 130px;
+        padding: 5px;
+        font-size: x-small;
+    }
+
+    .texto_painel_tela_principal {
+        font-size: medium;
+    }
+}

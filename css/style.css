@@ -325,7 +325,7 @@ body {
     flex-direction: column;
     flex-shrink: 0;
 
-    background-image: url("/img/menu_topo_tela_inicial.jpeg");
+    background-image: url("../img/menu_topo_tela_inicial.jpeg");
     background-size: cover;
     background-position: center;
     background-color: transparent;
@@ -475,7 +475,7 @@ body {
 ======================================== */
 
 .criacao_pastas {
-    background-image: url("/img/Cabeçalho Mágico para Criar Pasta.png");
+    background-image: url("../img/Cabeçalho Mágico para Criar Pasta.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

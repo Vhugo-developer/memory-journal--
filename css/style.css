@@ -294,7 +294,7 @@ body {
 ======================================== */
 
 .painel_fundo_secoes {
-    background-image: url("/img/tela_secao_pastas.jpeg");
+    background-image: url("../img/tela_secao_pastas.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: bottom;

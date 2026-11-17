@@ -1,353 +1,395 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tela de criacao de pastas</title>
+    <title>Tela de criação de pastas</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-          
-    
+
     <!-- HISTÓRIAS -->
     <section class="historias_tela">
-    
-        <div class="painel_fundo tela_fundo_historias">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_historias">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">🐺 Minhas Histórias</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">🐺 Minhas Histórias</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Um cantinho especial para dar vida à imaginação,
                     criar histórias e transformar ideias em palavras.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_historias')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- MEMÓRIAS -->
     <section class="memorias_tela">
-    
-        <div class="painel_fundo tela_fundo_memorias">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_memorias">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">💭 Minhas Memórias</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">💭 Minhas Memórias</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Espaço para escrever pensamentos, ideias, lembretes
                     e informações que deseja guardar.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_memorias')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- LIVROS -->
     <section class="livros_tela">
-    
-        <div class="painel_fundo tela_fundo_livros">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_livros">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">📚 Livros</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">📚 Livros</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Lugar para organizar livros, registrar o que leu
                     e guardar recomendações.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_livros')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- FILMES -->
     <section class="filmes_tela">
-    
-        <div class="painel_fundo tela_fundo_filmes">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_filmes">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">🎬 Filmes</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">🎬 Filmes</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Lugar para organizar filmes, registrar o que já assistiu
                     e guardar recomendações.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_filmes')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
+  
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- CABELOS -->
     <section class="cabelos_tela">
-    
-        <div class="painel_fundo tela_fundo_cabelos">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_cabelos">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">💇‍♀️ Cabelos</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">💇‍♀️ Cabelos</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Espaço para salvar referências de cortes, cores e penteados,
                     além de acompanhar cuidados e mudanças no cabelo.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_cabelos')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
+      
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- AUTOCUIDADO -->
     <section class="autocuidado_tela">
-    
-        <div class="painel_fundo tela_fundo_autocuidado">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_autocuidado">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">🌸 Autocuidado</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">🌸 Autocuidado</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Área dedicada a registrar rotinas, cuidados pessoais,
                     hábitos e atividades voltadas ao bem-estar.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_autocuidado')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
+      
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- FINANÇAS -->
     <section class="financas_tela">
-    
-        <div class="painel_fundo tela_fundo_financas">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_financas">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">💸 Finanças</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">💸 Finanças</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Área para organizar o dinheiro, registrar pagamentos,
                     acompanhar despesas e controlar o orçamento mensal.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_financas')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
+   
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- COMPRAS -->
     <section class="compras_tela">
-    
-        <div class="painel_fundo tela_fundo_compras">
-    
+
+        <div class="painel_fundo_secoes tela_fundo_compras">
+
             <div class="menu_topo_criacao_pastas">
-    
-                <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                    <div class="retorno_icone">⬅</div>
-                </button>
-    
-                <div class="titulo_secao">🛍️ Compras</div>
-    
+
+                <div class="botao_voltar_menu_secao">
+
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
+
+                    <div class="titulo_secao">🛍️ Compras</div>
+
+                </div>
+
                 <div class="descricao_secao">
                     Espaço para criar listas de compras, salvar produtos desejados
                     e acompanhar itens que pretende adquirir.
                 </div>
-    
+
             </div>
-    
+
+            <div class="painel_pastas_secao_pastas">
+            </div>
+
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_compras')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+
+
             </button>
-    
+
         </div>
-    
+
     </section>
-    
-    
+
+
     <!-- CALENDÁRIO -->
     <section class="calendario_tela">
+
+        <div class="painel_fundo_secoes tela_fundo_calendario">
     
-        <div class="menu_topo_calendario">
+            <div class="menu_topo_criacao_pastas menu_topo_calendario">
     
-            <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
-                <div class="retorno_icone">⬅</div>
-            </button>
+                <div class="botao_voltar_menu_secao">
     
-            <div class="titulo_secao">📅 Calendário</div>
+                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                        <div class="retorno_icone">⬅</div>
+                    </button>
     
-            <div class="descricao_secao">
-                Área para registrar compromissos, datas importantes,
-                eventos e lembretes.
+                    <div class="titulo_secao">📅 Calendário</div>
+    
+                </div>
+    
+                <div class="descricao_secao">
+                    Área para registrar compromissos, datas importantes,
+                    eventos e lembretes.
+                </div>
+    
             </div>
     
-        </div>
-    
-        <div class="painel_fundo tela_fundo_calendario">
+            <div class="painel_pastas_secao_pastas">
+            </div>
     
             <button class="criacao_pastas" onclick="CriarPasta('tela_fundo_calendario')">
-                <div class="criar_nova_pasta">
-                    <span>➕</span>
-                    <p>Criar novo tópico</p>
-                </div>
+    
             </button>
     
         </div>
     
     </section>
-    
-    
+
     <!-- MODELO DE PASTA -->
     <div class="modelo_pasta">
-    
+        
         <button class="pasta_botao"
             onclick="AbrirPasta(this.dataset.id, this.dataset.secao)">
-    
+            
             <div class="pasta_nome">📁 Pasta sem nome ➡</div>
-    
+
         </button>
-    
-    </div>-
 
-    <div class="."></div>
+    </div>
 
-    <!--JANELA DE CRIAÇÃO DA PASTA-->
+
+    <!-- JANELA DE CRIAÇÃO DA PASTA -->
     <dialog class="janela_criar_pasta" id="dialog_criar_pasta">
-    
+
         <button class="fechar_criar_pasta" type="button"
             onclick="FecharDialogCriarPasta()">
             ✖
         </button>
-    
+
         <div class="titulo_criar_pasta">
             Criar nova pasta 📁
         </div>
-    
+
         <div class="texto_criar_pasta">
             Escolha um nome para sua nova pasta!
         </div>
-    
+
         <div class="campo_nome_pasta">
+
             <label for="nome_nova_pasta">Nome da pasta</label>
+
             <input
                 type="text"
                 id="nome_nova_pasta"
                 placeholder="Digite o nome da pasta"
                 maxlength="40"
             >
+
         </div>
-    
+
         <button class="confirmar_criar_pasta" type="button"
             onclick="ConfirmarCriacaoPasta()">
             Criar pasta
         </button>
-    
+
         <button class="cancelar_criar_pasta" type="button"
             onclick="FecharDialogCriarPasta()">
             Cancelar
         </button>
-    
+
     </dialog>
-    
 
 </body>
 </html>

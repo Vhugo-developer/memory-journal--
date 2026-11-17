@@ -12,7 +12,8 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #D6B8D0;
-    overflow: hidden;
+    
+    
 }
 
 /* ==============================
@@ -31,6 +32,7 @@ body {
     background-position: center bottom;
     background-repeat: no-repeat;
     background-color: #D6B8D0;
+    box-shadow: 5px 5px 15px;
 
     border: 3px solid #D6B8D0;
     border-radius: 100px;
@@ -72,11 +74,11 @@ body {
 
     transform: translateX(-50%);
 
-    border: 3px solid #D8B8F0;
+    border: 3px solid black;
     border-radius: 25px;
     padding: 12px;
 
-    box-shadow: 0 0 15px #D8B8F0;
+    box-shadow: 5px 5px 15px black;
     background-color: transparent;
 
     width: 50px;
@@ -102,11 +104,11 @@ body {
     left: 35px;
     right: auto;
 
-    border: 3px solid #D8B8F0;
+    border: 3px solid black;
     border-radius: 25px;
     padding: 12px;
 
-    box-shadow: 0 0 15px #D8B8F0;
+    box-shadow: 5px 5px 15px black;
     background-color: #d8b8f052;
 
     display: flex;
@@ -127,12 +129,12 @@ body {
     right: 35px;
     left: auto;
 
-    border: 3px solid #D8B8F0;
+    border: 3px solid black;
     border-radius: 25px;
     padding: 12px;
 
-    box-shadow: 0 0 15px #D8B8F0;
-    background-color: #d8b8f052;
+    box-shadow: 5px 5px 15px black;
+    background-color: transparent;
 
     width: 50px;
     height: 50px;
@@ -149,10 +151,10 @@ body {
 .painel_tela_principal {
     background: transparent;
 
-    border: 2px solid #D8B8F0;
+    border: 2px solid black;
     border-radius: 100px;
 
-    box-shadow: 0 0 12px #D8B8F0;
+    box-shadow: 5px 5px 15px black;
 
     margin: 155px 55px 20px;
 
@@ -179,6 +181,7 @@ body {
     font-family: 'Lucida Sans', sans-serif;
     color: white;
     text-shadow: 2px 2px 4px black;
+    
 }
 
 .fundo_texto_painel_tela_principal {
@@ -209,6 +212,9 @@ body {
     width: 100%;
     max-width: 525px;
     margin: 0 auto;
+    
+    
+    
 
     /* ROLAGEM INDEPENDENTE */
     flex: 1;
@@ -238,12 +244,13 @@ body {
     min-width: 0;
     height: 145px;
 
-    border: 2px solid #D8B8F0;
+    border: 2px solid black;
     border-radius: 25px;
     padding: 8px;
 
     box-shadow: 0 0 12px #D8B8F0;
-    background-color: #d8b8f0b9;
+    background-color: transparent;
+    box-shadow: 5px 5px 15px;
 
     font-size: small;
     color: white;
@@ -278,5 +285,256 @@ body {
 
     .texto_painel_tela_principal {
         font-size: medium;
+    }
+}
+
+
+/* ========================================
+   PAINEL PRINCIPAL DAS SEÇÕES
+======================================== */
+
+.painel_fundo_secoes {
+    background-image: url("/img/tela_secao_pastas.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: bottom;
+
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    box-shadow: 2px 2px 15px black;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   MENU SUPERIOR
+======================================== */
+
+.menu_topo_criacao_pastas {
+    width: 100%;
+    min-height: 13vh;
+
+    display: flex;
+    flex-direction: column;
+    flex-shrink: 0;
+
+    background-image: url("/img/menu_topo_tela_inicial.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-color: transparent;
+
+    border-radius: 0 0px 50px 50px;
+    border: 2px solid black;
+    box-shadow: 5px 5px 15px black;
+
+    /* Mantém os elementos internos totalmente visíveis */
+    opacity: 1;
+
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   LINHA DO BOTÃO VOLTAR E TÍTULO
+======================================== */
+
+.botao_voltar_menu_secao {
+    width: 100%;
+
+    display: grid;
+
+    /* Três áreas: botão, título centralizado e espaço livre */
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    padding: 10px 15px;
+    box-sizing: border-box;
+}
+
+
+/* ========================================
+   BOTÃO DE VOLTAR
+======================================== */
+
+.retornar_criacao_pastas {
+    grid-column: 1;
+    justify-self: start;
+
+    background-size: contain;
+    background-color: #DDD0EA;
+
+    border: 2px solid black;
+    border-radius: 25px;
+
+    box-shadow: 5px 5px 15px black;
+
+    width: 80px;
+    height: 50px;
+
+    margin: 0;
+}
+
+
+/* Ícone dentro do botão */
+
+.retorno_icone {
+    color: black;
+    font-size: 30px;
+}
+
+
+/* ========================================
+   TÍTULO DA SEÇÃO
+======================================== */
+
+.titulo_secao {
+    grid-column: 2;
+    justify-self: center;
+
+    background-color: #DDD0EA;
+
+    border: 2px solid black;
+    border-radius: 25px;
+
+    padding: 8px 10px;
+
+    box-shadow: 5px 5px 15px black;
+
+    /* Impede que o título ultrapasse o espaço disponível */
+    max-width: calc(100vw - 150px);
+    box-sizing: border-box;
+
+    text-align: center;
+    overflow-wrap: break-word;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   DESCRIÇÃO DA SEÇÃO
+======================================== */
+
+.descricao_secao {
+    color: white;
+
+    text-shadow: 2px 2px 5px black;
+
+    text-align: center;
+
+    margin: auto 10px 15px;
+}
+
+
+/* ========================================
+   PAINEL ONDE AS PASTAS APARECEM
+======================================== */
+
+.painel_pastas_secao_pastas {
+    background-color: transparent;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 40px;
+
+    border: 2px solid black;
+    border-radius: 80px;
+
+    padding: 20px;
+    box-sizing: border-box;
+
+    box-shadow: inset 1px 1px 20px black;
+
+    width: min(600px, calc(100% - 32px));
+    height: 570px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+
+    scrollbar-width: none;
+}
+
+/* Esconde a barra de rolagem no Chrome e navegadores semelhantes */
+
+.painel_pastas_secao_pastas::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ========================================
+   BOTÃO DE CRIAR PASTAS
+======================================== */
+
+.criacao_pastas {
+    background-image: url("/img/Cabeçalho Mágico para Criar Pasta.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: min(380px, calc(100% - 32px));
+    height: 90px;
+
+    flex-shrink: 0;
+
+    border-radius: 25px;
+
+    margin-top: auto;
+    margin-bottom: 25px;
+}
+
+
+/* ========================================
+   MODELO DE PASTA
+======================================== */
+
+/* Fica escondido, pois é utilizado como modelo
+   para criar novas pastas através do JavaScript */
+
+.modelo_pasta {
+    display: none;
+}
+
+
+/* ========================================
+   AJUSTES PARA TELAS PEQUENAS
+======================================== */
+
+@media (max-width: 480px) {
+
+    /* Reduz o espaço interno do cabeçalho */
+
+    .botao_voltar_menu_secao {
+        padding: 10px;
+    }
+
+    /* Ajusta o botão para celulares */
+
+    .retornar_criacao_pastas {
+        width: 60px;
+        height: 45px;
+    }
+
+    /* Evita que títulos grandes invadam o botão */
+
+    .titulo_secao {
+        max-width: calc(100vw - 120px);
+        padding: 7px 8px;
+        font-size: 14px;
+    }
+
+    /* Ajusta o painel de pastas */
+
+    .painel_pastas_secao_pastas {
+        padding: 12px;
+        border-radius: 45px;
     }
 }

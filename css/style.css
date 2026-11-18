@@ -12,9 +12,10 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #D6B8D0;
-    overflow: h;
+    overflow: hidden;
     
 }
+
 
 /* ==============================
    TELA INICIAL

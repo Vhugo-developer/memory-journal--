@@ -9,7 +9,7 @@
 </head>
 <body>
 
-    <section class="tela_inicial">
+    <section class=" inicial tela_inicial" id="inicial">
 
         <!-- Perfil e configurações -->
         <div class="botao_perfil_icone_foto">
@@ -75,8 +75,8 @@
                     <div class="btn_autocuidado">🌸 Autocuidado</div>
                 </button>
 
-                <button class="crriar_novo_botao" onclick="AbrirSecao('criar_secao')">
-                    <div class="btn_autocuidado">➕ Criar Novo</div>
+                <button class="criar_novo_botao" onclick="AbrirSecao('criar_secao')">
+                    <div class="btn_nova_secao">➕ Criar Novo</div>
                 </button>
 
             </nav>
@@ -85,7 +85,7 @@
     </section>
 
     <!-- HISTÓRIAS -->
-    <section class="historias_tela">
+    <section class="tela historias_tela" id="historias">
 
         <div class="painel_fundo_secoes tela_fundo_historias">
 
@@ -93,7 +93,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -120,7 +120,7 @@
 
 
     <!-- MEMÓRIAS -->
-    <section class="memorias_tela">
+    <section class="tela memorias_tela" id="memorias">
 
         <div class="painel_fundo_secoes tela_fundo_memorias">
 
@@ -128,7 +128,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -156,7 +156,7 @@
 
 
     <!-- LIVROS -->
-    <section class="livros_tela">
+    <section class="tela livros_tela" id="livros">
 
         <div class="painel_fundo_secoes tela_fundo_livros">
 
@@ -164,7 +164,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -192,7 +192,7 @@
 
 
     <!-- FILMES -->
-    <section class="filmes_tela">
+    <section class="tela filmes_tela" id="filmes">
 
         <div class="painel_fundo_secoes tela_fundo_filmes">
 
@@ -200,7 +200,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -229,7 +229,7 @@
 
 
     <!-- CABELOS -->
-    <section class="cabelos_tela">
+    <section class="tela cabelos_tela" id="cabelos">
 
         <div class="painel_fundo_secoes tela_fundo_cabelos">
 
@@ -237,7 +237,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -266,7 +266,7 @@
 
 
     <!-- AUTOCUIDADO -->
-    <section class="autocuidado_tela">
+    <section class="tela autocuidado_tela" id="autocuidado">
 
         <div class="painel_fundo_secoes tela_fundo_autocuidado">
 
@@ -274,7 +274,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -303,7 +303,7 @@
 
 
     <!-- FINANÇAS -->
-    <section class="financas_tela">
+    <section class="tela financas_tela" id="financas">
 
         <div class="painel_fundo_secoes tela_fundo_financas">
 
@@ -311,7 +311,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -340,7 +340,7 @@
 
 
     <!-- COMPRAS -->
-    <section class="compras_tela">
+    <section class="tela compras_tela" id="compras">
 
         <div class="painel_fundo_secoes tela_fundo_compras">
 
@@ -348,7 +348,7 @@
 
                 <div class="botao_voltar_menu_secao">
 
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
 
@@ -377,7 +377,7 @@
 
 
     <!-- CALENDÁRIO -->
-    <section class="calendario_tela">
+    <section class="tela calendario_tela" id="calendario">
 
         <div class="painel_fundo_secoes tela_fundo_calendario">
     
@@ -385,7 +385,7 @@
     
                 <div class="botao_voltar_menu_secao">
     
-                    <button class="retornar_criacao_pastas" onclick="VoltarSecao('tela_inicial')">
+                    <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
                         <div class="retorno_icone">⬅</div>
                     </button>
     
@@ -412,7 +412,7 @@
     </section>
 
     <!-- MODELO DE PASTA -->
-    <div class="modelo_pasta">
+    <div class="tela modelo_pasta">
         
         <button class="pasta_botao"
             onclick="AbrirPasta(this.dataset.id, this.dataset.secao)">
@@ -464,5 +464,51 @@
         </button>
 
     </dialog>
+
+    <script>
+
+        const telas = [
+            'inicial',
+            'perfil',
+            'configuracoes',
+            'historias',
+            'memorias',
+            'livros',
+            'filmes',
+            'cabelos',
+            'autocuidado',
+            'financas'
+        ];
+        
+        // Guarda o display original de cada tela
+        const displaysOriginais = {};
+        
+        telas.forEach(id => {
+            const tela = document.getElementById(id);
+        
+            if (tela) {
+                displaysOriginais[id] = getComputedStyle(tela).display;
+            }
+        });
+        
+        function AbrirSecao(nome) {
+        
+            telas.forEach(id => {
+                const tela = document.getElementById(id);
+        
+                if (tela) {
+                    tela.style.display = 'none';
+                }
+            });
+        
+            const selecionada = document.getElementById(nome);
+        
+            if (selecionada) {
+                selecionada.style.display = displaysOriginais[nome];
+            }
+        
+        }
+        
+        </script>
 </body>
 </html>

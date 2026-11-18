@@ -14,6 +14,7 @@ body {
     background-color: #D6B8D0;
     overflow: hidden;
     
+    
 }
 
 
@@ -87,7 +88,7 @@ body {
 
     border: 3px solid transparent;
     
-    padding: 12px;
+    padding: 15px;
 
     box-shadow: 5px 5px 15px black;
     background-color: transparent;
@@ -149,7 +150,7 @@ body {
     
     padding: 12px;
 
-    box-shadow: 5px 5px 15px black;
+    
     background-color: transparent;
 
 
@@ -161,7 +162,7 @@ body {
 
     width: 50px;
     height: 50px;
-    box-shadow: 10px 10px 12px black;
+    
 
     
 }
@@ -412,8 +413,8 @@ body {
 
 .retorno_icone {
     color: white;
-    font-size: 50px;
-    transform: translateY(-14px);
+    font-size: 20px;
+    
 }
 
 

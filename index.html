@@ -1,4 +1,13 @@
 
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
@@ -94,7 +103,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">🐺 Minhas Histórias</div>
@@ -129,7 +138,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">💭 Minhas Memórias</div>
@@ -165,7 +174,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">📚 Livros</div>
@@ -201,7 +210,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">🎬 Filmes</div>
@@ -238,7 +247,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">💇‍♀️ Cabelos</div>
@@ -275,7 +284,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">🌸 Autocuidado</div>
@@ -312,7 +321,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">💸 Finanças</div>
@@ -349,7 +358,7 @@
                 <div class="botao_voltar_menu_secao">
 
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
 
                     <div class="titulo_secao">🛍️ Compras</div>
@@ -386,7 +395,7 @@
                 <div class="botao_voltar_menu_secao">
     
                     <button class="retornar_criacao_pastas" onclick="AbrirSecao('inicial')">
-                        <div class="retorno_icone">⬅</div>
+                        <div class="retorno_icone">voltar</div>
                     </button>
     
                     <div class="titulo_secao">📅 Calendário</div>
@@ -465,50 +474,46 @@
 
     </dialog>
 
-    <script>
+    
+<script>
+    // Seleciona todas as seções do HTML
+    const secoes = document.querySelectorAll('section');
 
-        const telas = [
-            'inicial',
-            'perfil',
-            'configuracoes',
-            'historias',
-            'memorias',
-            'livros',
-            'filmes',
-            'cabelos',
-            'autocuidado',
-            'financas'
-        ];
-        
-        // Guarda o display original de cada tela
-        const displaysOriginais = {};
-        
-        telas.forEach(id => {
-            const tela = document.getElementById(id);
-        
-            if (tela) {
-                displaysOriginais[id] = getComputedStyle(tela).display;
-            }
+    // Guarda o display original de cada seção
+    const displaysOriginais = new Map();
+
+    secoes.forEach(secao => {
+        displaysOriginais.set(
+            secao.id,
+            getComputedStyle(secao).display
+        );
+    });
+
+    // Função usada pelos botões para trocar de seção
+    window.AbrirSecao = function(nome) {
+
+        // Oculta todas as seções
+        secoes.forEach(secao => {
+            secao.style.display = 'none';
         });
-        
-        function AbrirSecao(nome) {
-        
-            telas.forEach(id => {
-                const tela = document.getElementById(id);
-        
-                if (tela) {
-                    tela.style.display = 'none';
-                }
-            });
-        
-            const selecionada = document.getElementById(nome);
-        
-            if (selecionada) {
-                selecionada.style.display = displaysOriginais[nome];
-            }
-        
+
+        // Encontra a seção solicitada
+        const secaoSelecionada = document.getElementById(nome);
+
+        // Se existir, mostra a seção
+        if (secaoSelecionada && displaysOriginais.has(nome)) {
+            secaoSelecionada.style.display =
+                displaysOriginais.get(nome);
         }
-        
-        </script>
+    };
+
+    // Inicia mostrando somente a tela inicial
+    AbrirSecao('inicial');
+</script>
+
 </body>
 </html>
+
+
+
+
